@@ -7,3 +7,7 @@ pacman -Qqe > $HOME/dotfiles/packages/pkg-list.txt
 pacman -Qme > $HOME/dotfiles/packages/pkg-list-aur.txt
 
 echo 'Update successful. Updated package lists can be found in ~/dotfiles/packages.'
+
+git -C $HOME/dotfiles add packages
+git -C $HOME/dotfiles commit -m "Updated package lists via an automated script found /bin/.local/bin/"
+git -C $HOME/dotfiles push origin main
