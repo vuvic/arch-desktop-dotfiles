@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Get all official packages and store them in a text file.
-pacman -Qqe > $HOME/dotfiles/packages/pkg-list.txt
+pacman -Qqne > $HOME/dotfiles/packages/pkg-list.txt
 
 # Repeat for all unofficial packages via AUR  in a separate text file.
-pacman -Qme > $HOME/dotfiles/packages/pkg-list-aur.txt
+pacman -Qqme > $HOME/dotfiles/packages/pkg-list-aur.txt
 
 echo 'Update successful. Updated package lists can be found in ~/dotfiles/packages.'
 
