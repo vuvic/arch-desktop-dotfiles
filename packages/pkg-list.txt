@@ -6,7 +6,7 @@ bluez-utils
 btrfs-progs
 cups
 cups-pk-helper
-discord
+discord-ptb
 dkms
 dolphin
 dunst
@@ -14,12 +14,14 @@ efibootmgr
 firefox
 git
 grim
+grub
 gst-plugin-pipewire
 htop
 hyprland
 hyprlauncher
 hyprpaper
 hyprpolkitagent
+hyprshot
 iwd
 jq
 kitty
@@ -64,10 +66,11 @@ wget
 wireguard-tools
 wireless_tools
 wireplumber
-wofi
 wpa_supplicant
 xdg-desktop-portal-hyprland
 xdg-utils
 xorg-server
 xorg-xinit
+yay
+yay-debug
 zram-generator
