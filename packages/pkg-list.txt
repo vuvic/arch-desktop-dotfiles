@@ -6,7 +6,6 @@ bluez-utils
 btrfs-progs
 cups
 cups-pk-helper
-discord-ptb
 dkms
 dolphin
 dunst
@@ -72,6 +71,4 @@ xdg-desktop-portal-hyprland
 xdg-utils
 xorg-server
 xorg-xinit
-yay
-yay-debug
 zram-generator
