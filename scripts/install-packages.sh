@@ -1,26 +1,40 @@
+function enable_pacman_repo ()
+{
+  local repo="$1"
+  local conf="/etc/pacman.conf"
 
-# Enable multilib if disabled
-if grep -q '^\[multilib\]' /etc/pacman.conf; then
-  echo "multilib already enabled"
-else
-  echo "Enabling multilib..."
-  sudo sed -i '/^\#\[multilib\]/,/^$/ { s/^\#// }' /etc/pacman.conf
-  sudo pacman -Sy
-fi
+  # Check if a second parameter was passed
+  if [[ -z "$repo" ]]; then
+    echo "Usage: enable_pacman_repo <repo-name>"
+    return 1
+  fi
 
-# Enable extra if disabled
-if grep -q '^\[extra\]' /etc/pacman.conf; then
-  echo "extra already enabled"
-else
-  echo "Enabling extra..."
-  sudo sed -i '/^\#\[extra\]/,/^$/ { s/^\#// }' /etc/pacman.conf
-  sudo pacman -Sy
-fi
+  # Check if repo is already enabled
+  if grep -q "^\[$repo\]" "$conf"; then
+    echo "$repo already enabled"
+    return 0
+  fi
+  
+  # Enable repo if it is found disabled in the config file
+  if grep -q "^#\[$repo\]" "$conf"; then
+    echo "Enabling $repo"
+    sudo sed -i "/^#\[$repo\]/,/^$/ { s/^\#// }" "$conf"
+    sudo pacman -Sy
+  else   
+    echo "Repo '$repo' not found in $conf"
+    return 1
+  fi
+}
+
+# Enable multilib and extra repositories
+for repo in multilib extra; do
+  enable_pacman_repo "$repo"
+done
+
 
 # Install packages from list
-
-input="$HOME/dotfiles/packages/pkg-list.txt"
- 
-sudo pacman -S --needed - < $input
+input="$HOME/dotfiles/packages/pkg-list.txt" 
+echo "Fetching files from $input..."
+sudo pacman -S --needed - < "$input"
 
 
