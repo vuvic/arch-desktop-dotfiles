@@ -37,6 +37,7 @@ nano
 neovim
 network-manager-applet
 networkmanager
+noto-fonts-cjk
 noto-fonts-emoji
 nvidia-open-dkms
 openresolv
