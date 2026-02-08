@@ -1,0 +1,7 @@
+[Unit]
+Description=Snapshot pacman & AUR packages and push them to github.
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/update-pkg-lists
+
