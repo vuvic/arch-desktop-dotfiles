@@ -48,6 +48,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 polkit-kde-agent
+protonmail-bridge
 qt5-wayland
 qt6-wayland
 sbctl
@@ -59,6 +60,7 @@ steam
 stow
 sudo
 system-config-printer
+thunderbird
 ttf-jetbrains-mono-nerd
 uwsm
 vim
