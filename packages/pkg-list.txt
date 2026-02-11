@@ -13,6 +13,7 @@ efibootmgr
 firefox
 git
 github-cli
+gnome-keyring
 grim
 grub
 gst-plugin-pipewire
