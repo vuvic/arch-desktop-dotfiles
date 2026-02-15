@@ -10,6 +10,7 @@ dkms
 dolphin
 dunst
 efibootmgr
+fd
 firefox
 git
 github-cli
@@ -64,6 +65,7 @@ sudo
 system-config-printer
 thunderbird
 ttf-jetbrains-mono-nerd
+unzip
 uwsm
 vim
 waybar
