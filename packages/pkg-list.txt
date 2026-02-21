@@ -4,7 +4,6 @@ base-devel
 bluez
 bluez-utils
 btrfs-progs
-chntpw
 cups
 cups-pk-helper
 dkms
@@ -29,6 +28,7 @@ iwd
 jq
 kitty
 krita
+libiconv
 libpulse
 libva-nvidia-driver
 linux
